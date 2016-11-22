@@ -1,7 +1,7 @@
 <?php // Example 26-1: functions.php
   $dbhost  = 'localhost';   
   $dbuser  = 'root'; 
-  $dbhost = 'robinsdb';  // ...variables according
+  $dbname = 'robinsdb';  // ...variables according
   $appname = "Robin's Nest"; // ...and preference
 
   $connection = new mysqli('localhost','root', NULL, 'robinsdb');
