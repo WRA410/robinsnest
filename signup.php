@@ -77,12 +77,11 @@ _END;
     <form action="">
     <input type='text' maxlength='16' name='pass'
       value='$pass'><br>
-      <span class=''fieldname'>Select One</span><br>
-<input type="checkbox" name="animal" value="Cat">Cat<br>
-<input type="checkbox" name="animal" value="Dog">Dog<br>
-<input type="checkbox" name="animal" value="Reptile">Reptile<br>
-<input type="checkbox" name="animal" value="Bird">Bird<br>
-<input type="checkbox" name="animal" value="Fish">Fish
+      <input type="radio" name="animal" value="Cat">Cat<br>
+<input type="radio" name="animal" value="Dog">Dog<br>
+<input type="radio" name="animal" value="Reptile">Reptile<br>
+<input type="radio" name="animal" value="Bird">Bird<br>
+<input type="radio" name="animal" value="Fish">Fish
 
 </form>
 _END;
