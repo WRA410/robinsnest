@@ -28,16 +28,17 @@
       $name2 = "$view's";
     }
 
-    echo "<div class='main'><h3>$name1 Messages</h3>";
+    echo "<div class='main'><h3>$name1 Page</h3>";
     showProfile($view);
     
     echo <<<_END
       <form method='post' action='messages.php?view=$view'>
-      Type here to leave a message:<br>
+      Type here to mark your territory:<br>
       <textarea name='text' cols='40' rows='3'></textarea><br>
       Public<input type='radio' name='pm' value='0' checked='checked'>
       Private<input type='radio' name='pm' value='1'>
-      <input type='submit' value='Post Message'></form><br>
+      <br><br>
+      <input type='submit' value='Let her rip!'></form><br>
 _END;
 
     if (isset($_GET['erase']))
