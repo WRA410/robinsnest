@@ -74,6 +74,7 @@ _END;
     <input type='text' maxlength='16' name='user' value='$user'
       onBlur='checkUser(this)'><span id='info'></span><br>
     <span class='fieldname'>Password</span>
+    <form action="">
     <input type='text' maxlength='16' name='pass'
       value='$pass'><br>
       <span class=''fieldname'>Select One</span><br>
