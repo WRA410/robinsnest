@@ -29,7 +29,7 @@ li a, .button {
 }
 
 li a:hover, .button:hover {
-  color:green;
+  color:#fff;
 }
  
 .appname {
@@ -58,17 +58,35 @@ li a:hover, .button:hover {
   margin-left:40px;
 }
 
-.menu li, .button {
+.menu-container {
+    width:100%;
+    height:40px;
+    background:#4767a2;
+    position:fixed;
+    top:-20px;
+    right:-6px;
+    padding:20px;
+}
+
+.menu{
+    position:absolute;
+    right:10px;
+}
+
+.menu li, .button, input {
   display           :inline;
   padding           :4px 6px;
-  border            :1px solid #777;
-  background        :#ddd;
-	color             :#d04;
+  background        :#4767a2;
+	color             :#fff;
   margin-right      :8px;
-	border-radius     :5px;
-	-moz-box-shadow   :2px 2px 2px #888;
-	-webkit-box-shadow:2px 2px 2px #888;
-	box-shadow        :2px 2px 2px #888;
+}
+
+a:visited, a:active, a:hover, {
+    color:#fff;
+}
+
+#content{
+    padding-top:60px;
 }
 
 .subhead {
