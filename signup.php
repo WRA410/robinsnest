@@ -61,12 +61,8 @@ _END;
       if ($result->num_rows)
         $error = "That username already exists<br><br>";
       else
-      {
-        queryMysql("INSERT INTO members VALUES('$user', '$pass')");
-        die("<h4>Account created</h4>Please Log in.<br><br>");
-      }
+     
     }
-  }
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Username: <input type="text" name="Username" value="<?php echo $user;?>">
@@ -75,13 +71,17 @@ _END;
   <span class="error">* <?php echo $emailErr;?></span>
   <br><br>
 Animal Type:
-  <input type="radio" name="animal" <?php if (isset($animal) && $gender=="cat") echo "checked";?> value="cat">cat
-  <input type="radio" name="animal" <?php if (isset($animal) && $gender=="dog") echo "checked";?> value="dog">dog
- <input type="radio" name="animal" <?php if (isset($animal) && $gender=="bird") echo "checked";?> value="bird">cat
-  <input type="radio" name="animal" <?php if (isset($animal) && $gender=="fish") echo "checked";?> value="fish">dog
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="cat") echo "checked";?> value="cat">cat
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="dog") echo "checked";?> value="dog">dog
+ <input type="radio" name="animal" <?php if (isset($animal) && $animal=="bird") echo "checked";?> value="bird">cat
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="fish") echo "checked";?> value="fish">dog
 
   <br><br>  
-</form>
+ {
+        queryMysql("INSERT INTO members VALUES('$user', '$pass', '$animal')");
+        die("<h4>Account created</h4>Please Log in.<br><br>");
+      }
+
     <span class='fieldname'>&nbsp;</span>
     <input type='submit' value='Sign up'>
     </form></div><br>
