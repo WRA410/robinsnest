@@ -68,26 +68,21 @@ _END;
     }
   }
 
-  echo <<<_END
-    <form method='post' action='signup.php'>$error
-    <span class='fieldname'>Username</span>
-    <input type='text' maxlength='16' name='user' value='$user'
-      onBlur='checkUser(this)'><span id='info'></span><br>
-    <span class='fieldname'>Password</span>
-    <form action="">
-    <input type='text' maxlength='16' name='pass'
-      value='$pass'><br>
-      <span class=''fieldname'>Select One</span><br>
-<input type="checkbox" name="animal" value="Cat">Cat<br>
-<input type="checkbox" name="animal" value="Dog">Dog<br>
-<input type="checkbox" name="animal" value="Reptile">Reptile<br>
-<input type="checkbox" name="animal" value="Bird">Bird<br>
-<input type="checkbox" name="animal" value="Fish">Fish
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Username: <input type="text" name="Username" value="<?php echo $user;?>">
+<span class="error">* <?php echo $nameErr;?></span>
+ Password: <input type="text" name="password" value="<?php echo $pass;?>">
+  <span class="error">* <?php echo $emailErr;?></span>
+  <br><br>
+Animal Type:
+  <input type="radio" name="animal" <?php if (isset($animal) && $gender=="cat") echo "checked";?> value="cat">cat
+  <input type="radio" name="animal" <?php if (isset($animal) && $gender=="dog") echo "checked";?> value="dog">dog
+ <input type="radio" name="animal" <?php if (isset($animal) && $gender=="bird") echo "checked";?> value="bird">cat
+  <input type="radio" name="animal" <?php if (isset($animal) && $gender=="fish") echo "checked";?> value="fish">dog
 
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
 </form>
-_END;
-?>
-
     <span class='fieldname'>&nbsp;</span>
     <input type='submit' value='Sign up'>
     </form></div><br>
