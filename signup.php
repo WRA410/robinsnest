@@ -44,6 +44,13 @@
   <div class='main'><h3>Please enter your details to sign up</h3>
 _END;
 
+  $error = $user = $pass = "";
+  if (isset($_SESSION['user'])) destroySession();
+
+  if (isset($_POST['user']))
+  {
+    $user = sanitizeString($_POST['user']);
+    $pass = sanitizeString($_POST['pass']);
 
     if ($user == "" || $pass == "")
       $error = "Not all fields were entered<br><br>";
@@ -54,26 +61,23 @@ _END;
       if ($result->num_rows)
         $error = "That username already exists<br><br>";
       else
-     
-    }
-
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
-  Username: <input type="text" name="Username" value="<?php echo $user;?>">
-<span class="error">* <?php echo $nameErr;?></span>
- Password: <input type="text" name="password" value="<?php echo $pass;?>">
-  <span class="error">* <?php echo $emailErr;?></span>
-  <br><br>
-Animal Type:
-  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="cat") echo "checked";?> value="cat">cat
-  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="dog") echo "checked";?> value="dog">dog
- <input type="radio" name="animal" <?php if (isset($animal) && $animal=="bird") echo "checked";?> value="bird">cat
-  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="fish") echo "checked";?> value="fish">dog
-
-  <br><br>  
- {
-        queryMysql("INSERT INTO members VALUES('$user', '$pass', '$animal')");
+      {
+        queryMysql("INSERT INTO members VALUES('$user', '$pass')");
         die("<h4>Account created</h4>Please Log in.<br><br>");
       }
+    }
+  }
+
+  echo <<<_END
+    <form method='post' action='signup.php'>$error
+    <span class='fieldname'>Username</span>
+    <input type='text' maxlength='16' name='user' value='$user'
+      onBlur='checkUser(this)'><span id='info'></span><br>
+    <span class='fieldname'>Password</span>
+    <input type='text' maxlength='16' name='pass'
+      value='$pass'><br>
+_END;
+?>
 
     <span class='fieldname'>&nbsp;</span>
     <input type='submit' value='Sign up'>
