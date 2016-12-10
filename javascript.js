@@ -6,7 +6,7 @@ context.font         = 'bold italic 97px Helvetica'
 context.textBaseline = 'top'
 
 image                = new Image()
-image.src            = 'petstagram_logo02.ai'
+image.src            = '42001-dog-and-cat-silhouettes-together.png'
 
 image.onload = function()
 {
