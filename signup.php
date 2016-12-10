@@ -80,8 +80,7 @@ Animal Type:
  <input type="radio" name="animal" <?php if (isset($animal) && $gender=="bird") echo "checked";?> value="bird">cat
   <input type="radio" name="animal" <?php if (isset($animal) && $gender=="fish") echo "checked";?> value="fish">dog
 
-  <br><br>
-  <input type="submit" name="submit" value="Submit">  
+  <br><br>  
 </form>
     <span class='fieldname'>&nbsp;</span>
     <input type='submit' value='Sign up'>
