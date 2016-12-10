@@ -14,7 +14,6 @@
     $userstr  = " $user";
   }
   else $loggedin = FALSE;
-VAUGHN
   if ($loggedin)
   {
     echo "<div class='menu-container'>

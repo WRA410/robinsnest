@@ -1,4 +1,11 @@
 /* Example 26-13: styles.css */
+/*
+Dark blue:#4767A2
+Light blue:#a3c3ff
+Brown:#a28037
+Tan:#efcc81
+Medium blue:#81a7ef
+*/
 
 * {
   font-family:verdana,sans-serif;
@@ -8,7 +15,7 @@
 body {
   width     :700px;
   margin    :20px auto;
-  background:#f8f8f8;
+  background:#81a7ef;
   border    :1px solid #888;
 }
 
