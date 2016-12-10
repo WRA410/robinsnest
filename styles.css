@@ -15,7 +15,7 @@ Medium blue:#81a7ef
 }
 
 body {
-  width     :700px;
+  width     :90%;
   margin    :20px auto;
   background:#81a7ef;
   border    :1px solid #888;
@@ -33,16 +33,21 @@ img {
   box-shadow        :2px 2px 2px #888;
 }
 
-.logo {
+.navbar {
     height:40px;
-    position: absolute;
-    left:40px;
     top:30px;
     border:none;
     margin-right      :none;
    -moz-box-shadow   :none;
    -webkit-box-shadow:none;
     box-shadow        :none;
+    display:inline;
+}
+
+#logo{
+    position: absolute;
+    left:40px;
+    top:30px;
 }
 
 li a, .button {
@@ -52,7 +57,13 @@ li a, .button {
 li a:hover, .button:hover {
   color:#fff;
 }
- 
+
+.menu li {
+  display           :inline;
+  padding           :4px 6px;
+  margin-right      :8px;
+}
+
 .appname {
   text-align :center;
   background :#eb8;
@@ -92,9 +103,10 @@ li a:hover, .button:hover {
 .menu{
     position:absolute;
     right:10px;
+    top:10px;
 }
 
-.menu li, .button, input {
+.button, input {
   display           :inline;
   padding           :4px 6px;
   background        :#4767a2;
