@@ -14,11 +14,11 @@
     $userstr  = " $user";
   }
   else $loggedin = FALSE;
-VAUGHN
   if ($loggedin)
   {
-    echo "<div class='menu-container'>
-         <ul class='menu'>" .
+    echo "<div class='menu-container'>" .
+         "<img src='logo.png' class='logo'>" .
+         "<ul class='menu'>" .
          "<li><a href='members.php?view=$user'>Home</a></li>" .
          "<li><a href='members.php'>Members</a></li>"         .
          "<li><a href='friends.php'>Friends</a></li>"         .
