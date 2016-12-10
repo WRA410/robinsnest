@@ -77,8 +77,8 @@ _END;
     <input type='text' maxlength='16' name='pass'
       value='$pass'><br>
     Animal Type:
-  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="cat") echo "checked";?> value="cat">cat
-  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="dog") echo "checked";?> value="dog">dog
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="cat") echo "checked";?> value='cat'>cat
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="dog") echo "checked";?> value='dog'>dog
 _END;
 ?>
 
