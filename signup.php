@@ -61,31 +61,26 @@ _END;
       if ($result->num_rows)
         $error = "That username already exists<br><br>";
       else
-      {
-        queryMysql("INSERT INTO members VALUES('$user', '$pass')");
+     
+    }
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
+  Username: <input type="text" name="Username" value="<?php echo $user;?>">
+<span class="error">* <?php echo $nameErr;?></span>
+ Password: <input type="text" name="password" value="<?php echo $pass;?>">
+  <span class="error">* <?php echo $emailErr;?></span>
+  <br><br>
+Animal Type:
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="cat") echo "checked";?> value="cat">cat
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="dog") echo "checked";?> value="dog">dog
+ <input type="radio" name="animal" <?php if (isset($animal) && $animal=="bird") echo "checked";?> value="bird">cat
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="fish") echo "checked";?> value="fish">dog
+
+  <br><br>  
+ {
+        queryMysql("INSERT INTO members VALUES('$user', '$pass', '$animal')");
         die("<h4>Account created</h4>Please Log in.<br><br>");
       }
-    }
-  }
-
-  echo <<<_END
-    <form method='post' action='signup.php'>$error
-    <span class='fieldname'>Username</span>
-    <input type='text' maxlength='16' name='user' value='$user'
-      onBlur='checkUser(this)'><span id='info'></span><br>
-    <span class='fieldname'>Password</span>
-    <form action="">
-    <input type='text' maxlength='16' name='pass'
-      value='$pass'><br>
-      <input type="radio" name="animal" value="Cat">Cat<br>
-<input type="radio" name="animal" value="Dog">Dog<br>
-<input type="radio" name="animal" value="Reptile">Reptile<br>
-<input type="radio" name="animal" value="Bird">Bird<br>
-<input type="radio" name="animal" value="Fish">Fish
-
-</form>
-_END;
-?>
 
     <span class='fieldname'>&nbsp;</span>
     <input type='submit' value='Sign up'>
