@@ -3,6 +3,8 @@
 
   echo "<!DOCTYPE html>\n<html><head>";
 
+  echo "<link href='https://fonts.googleapis.com/css?family=Cookie|Lato:300,400,700i,900,900i' rel='stylesheet'>";
+
   require_once 'functions.php';
 
   $userstr = ' (Guest)';
