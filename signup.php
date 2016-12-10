@@ -44,13 +44,6 @@
   <div class='main'><h3>Please enter your details to sign up</h3>
 _END;
 
-  $error = $user = $pass = "";
-  if (isset($_SESSION['user'])) destroySession();
-
-  if (isset($_POST['user']))
-  {
-    $user = sanitizeString($_POST['user']);
-    $pass = sanitizeString($_POST['pass']);
 
     if ($user == "" || $pass == "")
       $error = "Not all fields were entered<br><br>";
