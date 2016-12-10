@@ -5,8 +5,8 @@ context              = canvas.getContext('2d')
 context.font         = 'bold italic 97px Helvetica'
 context.textBaseline = 'top'
 
-image                = new Image('petstagram_logo02.ai')
-image.src            = ''
+image                = new Image()
+image.src            = ''petstagram_logo02.ai''
 
 image.onload = function()
 {
