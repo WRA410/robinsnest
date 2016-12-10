@@ -1,6 +1,6 @@
 // Example 26-14: javascript.js
 
-canvas               = O
+canvas               = O('logo')
 context              = canvas.getContext('2d')
 context.font         = 'bold italic 97px Helvetica'
 context.textBaseline = 'top'
