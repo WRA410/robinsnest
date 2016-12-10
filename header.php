@@ -19,14 +19,12 @@
   if ($loggedin)
   {
     echo "<div class='menu-container'>" .
-         "<img src='logo.png' class='logo'>" .
+         "<img src='logo.png' class='navbar' id='logo'>" .
          "<ul class='menu'>" .
-         "<li><a href='members.php?view=$user'>Home</a></li>" .
-         "<li><a href='members.php'>Members</a></li>"         .
-         "<li><a href='friends.php'>Friends</a></li>"         .
-         "<li><a href='messages.php'>My Page</a></li>"       .
-         "<li><a href='profile.php'>Edit Profile</a></li>"    .
-         "<li><a href='logout.php'>Log out</a></li></ul>
+         "<li><a href='members.php?view=$user'><img src='home.png' class='navbar' title='Home' alt='Home'></a></li>" .
+         "<li><a href='members.php'><img src='bone.png'  class='navbar' title='Directory' alt='Directory'></a></li>"       .
+         "<li><a href='messages.php'><img src='profile.png'  class='navbar' title='Your Profile' alt='Your Profile'></a></li>"       .
+         "<li><a href='logout.php'><img src='logout.png' class='navbar' title='Logout' alt='Logout'></a></li></ul>
          </div>
          <br>";
   }
