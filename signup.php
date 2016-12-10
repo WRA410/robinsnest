@@ -76,6 +76,8 @@ _END;
     <span class='fieldname'>Password</span>
     <input type='text' maxlength='16' name='pass'
       value='$pass'><br>
+      <input type="radio" name="animal' <?php if (isset($animal) && $animal=="cat") echo "checked";?> vaule="cat">Cat
+      <imput type="radio" name='animal' <?php if (isset($animal) && $animal=="dog") echo "checked"'?> vaule="dog">Dog
 _END;
 ?>
 
