@@ -14,11 +14,7 @@
               'user VARCHAR(16),
               pass VARCHAR(16),
 <<<<<<< HEAD
-<<<<<<< HEAD
               animal VARCHAR(8),
-=======
-              animal VARCHAR(10) NOT NULL)
->>>>>>> origin/master
 =======
               animal VARCHAR(10) NOT NULL)
 >>>>>>> origin/master
