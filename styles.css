@@ -49,6 +49,10 @@ a, .button {
   font-weight:700;
 }
 
+a:hover, a:visited{
+    color:#fff;
+}
+
 .menu li {
   display           :inline;
   padding           :4px 6px;
