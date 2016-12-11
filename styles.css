@@ -15,10 +15,7 @@ Medium blue:#81a7ef
 }
 
 body {
-  width     :90%;
-  margin    :20px auto;
-  background:#81a7ef;
-  border    :1px solid #888;
+  background:#fff;
 }
 
 html {
@@ -50,12 +47,9 @@ img {
     top:30px;
 }
 
-li a, .button {
+a, .button {
   text-decoration:none;
-}
-
-li a:hover, .button:hover {
-  color:#fff;
+  font-weight:700;
 }
 
 .menu li {
@@ -79,14 +73,20 @@ li a:hover, .button:hover {
 }
 
 .main {
-  margin-left:40px;
+  position: static;
+  top:50px;
+  background-color:#81a7ef;
+  padding:20px;
+  border: 1px black solid;
+  width:90%;
+  margin:20px auto;
 }
 
 .info {
   background :lightgreen;
   color      :blue;
-	border     :1px solid green;
-	padding    :5px 10px;
+  border     :1px solid green;
+  padding    :5px 10px;
   margin-left:40px;
 }
 
@@ -137,11 +137,4 @@ a:visited, a:active, a:hover, {
 .whisper {
   font-style:italic;
   color     :#006600;
-}
-
-#logo {
-  font-family:Georgia;
-  font-weight:bold;
-  font-style:italic;
-  font-size :97px;
 }
