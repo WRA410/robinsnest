@@ -51,6 +51,7 @@ _END;
   {
     $user = sanitizeString($_POST['user']);
     $pass = sanitizeString($_POST['pass']);
+    $animal = sanitizeString($_POST['animal']);
 
     if ($user == "" || $pass == "")
       $error = "Not all fields were entered<br><br>";
@@ -76,9 +77,9 @@ _END;
     <span class='fieldname'>Password</span>
     <input type='text' maxlength='16' name='pass'
       value='$pass'><br>
-    Animal Type:
-  <input type="radio" name="$animal" <?php if (isset($animal) && $animal=="cat") echo "checked";?> value='cat'>cat
-  <input type="radio" name="$animal" <?php if (isset($animal) && $animal=="dog") echo "checked";?> value='dog'>dog
+   <span class='fieldname'>Animal Type</span>
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="cat") echo "checked";?>>cat
+  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="dog") echo "checked";?>>dog
 _END;
 ?>
 
