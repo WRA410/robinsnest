@@ -13,6 +13,7 @@
   createTable('members',
               'user VARCHAR(16),
               pass VARCHAR(16),
+              animal VARCHAR(8),
               INDEX(user(6))');
 
   createTable('messages', 

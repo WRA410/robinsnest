@@ -53,7 +53,7 @@ _END;
     $pass = sanitizeString($_POST['pass']);
     $animal = sanitizeString($_POST['animal']);
 
-    if ($user == "" || $pass == "")
+    if ($user == "" || $pass == "" || $animal == "")
       $error = "Not all fields were entered<br><br>";
     else
     {
@@ -63,7 +63,7 @@ _END;
         $error = "That username already exists<br><br>";
       else
       {
-        queryMysql("INSERT INTO members VALUES('$user', '$pass')");
+        queryMysql("INSERT INTO members VALUES('$user', '$pass', '$animal')");
         die("<h4>Account created</h4>Please Log in.<br><br>");
       }
     }
@@ -71,15 +71,23 @@ _END;
 
   echo <<<_END
     <form method='post' action='signup.php'>$error
-    <span class='fieldname'>Username</span>
+    
+    <span class='fieldname'>Username:</span>
     <input type='text' maxlength='16' name='user' value='$user'
       onBlur='checkUser(this)'><span id='info'></span><br>
-    <span class='fieldname'>Password</span>
+      
+    <span class='fieldname'>Password:</span>
     <input type='text' maxlength='16' name='pass'
       value='$pass'><br>
-   <span class='fieldname'>Animal Type</span>
-  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="cat") echo "checked";?>>cat
-  <input type="radio" name="animal" <?php if (isset($animal) && $animal=="dog") echo "checked";?>>dog
+      
+    <span class='fieldname'>Animal Type:</span>
+   
+  <input type='radio' name="animal" value="cat" <?php if (isset($animal) && $animal=="cat") echo "checked";?>Cat
+  <input type="radio" name="animal" value="dog" <?php if (isset($animal) && $animal=="dog") echo "checked";?>Dog
+  <input type='radio' name="animal" value="fish" <?php if (isset($animal) && $animal=="fish") echo "checked";?>Fish
+  <input type='radio' name="animal" value="bird" <?php if (isset($animal) && $animal=="bird") echo "checked";?>Bird
+  <input type='radio' name="animal" value="reptile" <?php if (isset($animal) && $animal=="reptile") echo "checked";?>Reptile
+  
 _END;
 ?>
 
