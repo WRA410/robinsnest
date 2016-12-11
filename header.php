@@ -19,7 +19,7 @@
 
   echo "<title>$appname$userstr</title><link rel='stylesheet' href='styles.css' type='text/css'>"                     .
        "</head><body><div id='content'>"             .
-       "<div class='appname'>Welcome to $appname, $userstr!</div></div>"            .
+       "<div class='appname'><h1>Welcome to $appname, $userstr!</h1></div></div>"            .
        "<script src='javascript.js'></script>";
 
   if ($loggedin)
@@ -40,7 +40,7 @@
     echo ("<div class='menu-container'>
           <a href='index.php'><img src='logo.png' class='navbar' id='logo'></a>
           <ul class='menu'>
-          <li><a href='index.php'>Home</a></li>
+          <li><a href='index.php'><img src='home.png' class='navbar' title='Home' alt='Home'></a></li>
           <li><a href='signup.php'>Sign up</a></li>
           <li><a href='login.php'>Log in</a></li></ul><br></div>
           <span class='info'>&#8658; You must be logged in to view this page.</span>

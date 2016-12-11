@@ -7,19 +7,16 @@ Tan:#efcc81
 Medium blue:#81a7ef
 */
 
-* {
-  font-family:Lato,verdana,sans-serif;
-  font-weight:300;
-  color:white;
-  font-size  :14pt;
+html {
+  background:#fff
 }
 
 body {
   background:#fff;
-}
-
-html {
-  background:#fff
+  font-family:Lato,verdana,sans-serif;
+  font-weight:300;
+  color:white;
+  font-size  :14pt;
 }
 
 img {
@@ -60,9 +57,9 @@ a, .button {
 
 .appname {
   text-align :center;
-  background :#eb8;
-  color      :#40d;
+  background :#a28037;
   font-family:helvetica;
+  color:
   font-size  :20pt;
   padding    :4px;
 }
