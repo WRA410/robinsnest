@@ -19,13 +19,6 @@
     die("</div></body></html>");
   }
 
-if (isset($_GET['cat'])) //this is horrible
-{$cat = santizeString($_GET['cat']);
-
-$result = queryMysql("SELECT * FROM members WHERE animal='$cat' AND ($view == $user)")
-} //I just want it to tell you you're a cat
-//I don't even know if the above is the right start...I don't know the syntax
-
   if (isset($_GET['add']))
   {
     $add = sanitizeString($_GET['add']);
