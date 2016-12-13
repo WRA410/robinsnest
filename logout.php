@@ -5,7 +5,7 @@
   {
     destroySession();
     echo "<div class='main'>You have been logged out. Please " .
-         "<a href='index.php'>click here</a> to refresh the screen.";
+         "<a href='index.php'>click here</a> to refresh the screen or <a href='login.php'>log in</a> as another user.";
   }
   else echo "<div class='main'><br>" .
             "You cannot log out because you are not logged in";
