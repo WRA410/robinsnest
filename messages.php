@@ -28,7 +28,14 @@
       $name2 = "$view's";
     }
 
-    echo "<div class='main'><h3>$name1 Page</h3>";
+    echo "<div class='main'><h3>$name1 Pawfile</h3>";
+      
+  if ($view != "" and $view == $user) {
+      echo "<a href='profile.php'>Edit your pawfile</a><br>";
+    }
+  }
+      
+      
     showProfile($view);
     
     echo <<<_END
@@ -73,7 +80,7 @@ _END;
         echo "<br>";
       }
     }
-  }
+  
 
   if (!$num) echo "<br><span class='info'>No messages yet</span><br><br>";
 

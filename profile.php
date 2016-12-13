@@ -3,7 +3,7 @@
 
   if (!$loggedin) die();
 
-  echo "<div class='main'><h3>Your Profile</h3>";
+  echo "<div class='main'><h3>Your Pawfile</h3>";
 
   $result = queryMysql("SELECT * FROM profiles WHERE user='$user'");
     
@@ -47,7 +47,7 @@
     {
       list($w, $h) = getimagesize($saveto);
 
-      $max = 400;
+      $max = 500;
       $tw  = $w;
       $th  = $h;
 
@@ -80,13 +80,14 @@
 
   echo <<<_END
     <form method='post' action='profile.php' enctype='multipart/form-data'>
-    <h3>Enter or edit your details and/or upload an image</h3>
+    <p>Enter or edit your details and/or upload an image. Your profile picture must be square and 500x500px or less.</p>
     <textarea name='text' cols='50' rows='3'>$text</textarea><br>
 _END;
 ?>
 
     Image: <input type='file' name='image' size='14'>
-    <input type='submit' value='Save Profile'>
+    <br><br>
+    <input type='submit' value='Save Pawfile'>
     </form></div><br>
   </body>
 </html>
