@@ -53,4 +53,10 @@
       echo stripslashes($row['text']) . "<br style='clear:left;'><br>";
     }
   }
+
+  function showPreview($user)
+  {
+    if (file_exists("$user.jpg"))
+      echo "<img src='$user.jpg' style='float:left;'>";
+  }
 ?>

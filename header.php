@@ -27,9 +27,9 @@
     echo "<div class='menu-container'>
          <a href='index.php'><img src='logo.png' class='navbar' id='logo'></a>
          <ul class='menu'>
-         <li><a href='members.php?view=$user'><img src='home.png' class='navbar' title='Home' alt='Home'></a></li>
-         <li><a href='members.php'><img src='bone.png'  class='navbar' title='Directory' alt='Directory'></a></li>
-         <li><a href='messages.php'><img src='profile.png'  class='navbar' title='Your Profile' alt='Your Profile'></a></li>
+         <li><a href='index.php?view=$user'><img src='home.png' class='navbar' title='Home' alt='Home'></a></li>
+         <li><a href='members.php'><img src='directory.png'  class='navbar' title='Directory' alt='Directory'></a></li>
+         <li><a href='messages.php'><img src='profile.png'  class='navbar' title='Your Pawfile' alt='Your Pawfile'></a></li>
          <li><a href='logout.php'><img src='logout.png' class='navbar' title='Logout' alt='Logout'></a></li>
          </ul>
          </div>
@@ -41,9 +41,8 @@
           <a href='index.php'><img src='logo.png' class='navbar' id='logo'></a>
           <ul class='menu'>
           <li><a href='index.php'><img src='home.png' class='navbar' title='Home' alt='Home'></a></li>
-          <li><a href='signup.php'>Sign up</a></li>
-          <li><a href='login.php'>Log in</a></li></ul><br></div>
-          <span class='info'>&#8658; You must be logged in to view this page.</span>
+          </div>
+          <span class='info'>&#8658; Please <a href='signup.php'>sign up</a> or <a href='login.php'>log in</a> to view this page.</span>
           <br><br>");
   }
 
