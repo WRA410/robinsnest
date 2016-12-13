@@ -3,7 +3,7 @@
 
   if (!$loggedin) die();
 
-  echo "<div class='main'><h3>Your Pawfile</h3>";
+  echo "<div class='main'><h3>Edit Your Pawfile</h3>";
 
   $result = queryMysql("SELECT * FROM profiles WHERE user='$user'");
     
